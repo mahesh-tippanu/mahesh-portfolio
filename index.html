@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahesh Kumar Tippanu - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1 class="logo">Mahesh Kumar</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle">
+      <i id="theme-icon" class="fas fa-moon"></i>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <img src="Mahesh.jpg" alt="Mahesh Kumar Tippanu" class="profile-img"/>
+    <h2>Hello, I'm <span>Mahesh Kumar Tippanu</span></h2>
+    <p>A passionate developer specialized in Java, Python & Azure Cloud</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>I’m currently pursuing my M.Tech in Computer Science at GITAM University. I have experience as a Python Developer, Azure Cloud Engineer, and Java Full Stack Developer. I love building smart solutions using ML, Cloud, and Web technologies.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Java</div>
+      <div class="skill">Python</div>
+      <div class="skill">Azure</div>
+      <div class="skill">Spring Boot</div>
+      <div class="skill">Django</div>
+      <div class="skill">SQL Server</div>
+      <div class="skill">Git</div>
+      <div class="skill">REST APIs</div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <h2>Experience</h2>
+    <div class="exp-block">
+      <h3>Desktop Support Engineer – Frontier Communications Pvt Ltd (2024)</h3>
+      <p>Maintained Azure infrastructure, ensured security and high availability.</p>
+    </div>
+    <div class="exp-block">
+      <h3>Python Developer – Paccore IT Solutions (2023)</h3>
+      <p>Developed core modules in Java and implemented business logic.</p>
+    </div>
+    <div class="exp-block">
+      <h3>Apprentice Engineer – BridgeLabz Solutions (2022)</h3>
+      <p>Trained in Java full stack and built real-world web apps.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Crypto Recommendation System</h3>
+        <p>ML-powered system to recommend top crypto coins using trend analysis.</p>
+      </div>
+      <div class="project">
+        <h3>Journal Recommendation Tool</h3>
+        <p>ML model to help researchers pick journals based on CiteScore & rank.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>📧 <a href="mailto:maheshkumartippanu@gmail.com">maheshkumartippanu@gmail.com</a></p>
+    <p>📞 +91-6303186275</p>
+    <p>🔗 <a href="https://github.com/maheshkumartippanu" target="_blank">GitHub</a> |
+       <a href="https://linkedin.com/in/mahesh-kumar-tippanu" target="_blank">LinkedIn</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Mahesh Kumar Tippanu. All rights reserved.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById("theme-toggle");
+  const icon = document.getElementById("theme-icon");
+  const body = document.body;
+
+  const currentTheme = localStorage.getItem("theme") || "dark";
+  if (currentTheme === "light") {
+    body.classList.add("light-theme");
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("light-theme");
+    const isLight = body.classList.contains("light-theme");
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+    icon.classList.toggle("fa-sun");
+    icon.classList.toggle("fa-moon");
+  });
+</script>
+
+</body>
+</html>
